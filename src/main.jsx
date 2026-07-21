@@ -1,10 +1,20 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import User from './User.jsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import User from "./User.jsx";
 
-createRoot(document.getElementById('root')).render(
+const user = {
+  name: "Hadia",
+  surname: "Shahjahan",
+  age: 23,
+  dob: "2006-02-10",
+  country: "Pakistan",
+  city: "Sialkot",
+  profession: "Student",
+};
+
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <User/>
+    <User info={user} />
   </StrictMode>,
-)
+);

@@ -1,23 +1,34 @@
-import { useState } from 'react'
-function User(info) {
+function User({ info }) {
   return (
     <>
       <table border={1}>
-        <th>
-          <td>Name</td>
-          <td>Age</td>
-          <td>Date of Birth</td>
-          <td>City</td>
-          <td>Profession</td>
-        </th>
-        <tbody><td>info.name</td>
-        <td>info.age</td>
-        <td><time datetime="2006-02-10">info.dob</time></td>
-        <td>info.city</td>
-        <td>info.profession</td></tbody>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Country</th>
+            <th>Age</th>
+            <th>Date of Birth</th>
+            <th>City</th>
+            <th>Profession</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{info.name}</td>
+            <td>{info.surname}</td>
+             <td>{info.country}</td>
+            <td>{info.age}</td>
+            <td>
+              <time dateTime="2006-02-10">{info.dob}</time>
+            </td>
+            <td>{info.city}</td>
+            <td>{info.profession}</td>
+          </tr>
+        </tbody>
       </table>
     </>
-  )
+  );
 }
 
-export default User
+export default User;
