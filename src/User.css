@@ -43,10 +43,7 @@ button:hover {
   background-color: #ebc1c1;
   color: rgb(45, 21, 21);
 }
-.btn {
-  margin-inline: auto;
-  width: fit-content;
-}
+
 td:hover {
   text-decoration: underline;
 }
