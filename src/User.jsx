@@ -13,6 +13,7 @@ function User({ info }) {
   }
   return (
     <>
+      <h1>Eligibility Checker</h1>
       <table border={1}>
         <thead>
           <tr>
