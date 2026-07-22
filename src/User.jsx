@@ -1,11 +1,13 @@
 import "./User.css";
 import { useState } from "react";
 function User({ info }) {
-  const [age, setAge] = useState(info.age);
+  const [age, setAge] = useState(23);
   const eligibility = "...?";
   const [eligibilityStatus, setEligibilityStatus] = useState(eligibility);
   function checkStatus() {
-    if (age > 18 && age < 25) {
+    const calcAge = new Date().getFullYear() - new Date(info.dob).getFullYear();
+    setAge(calcAge);
+    if (calcAge > 18 && calcAge < 25) {
       setEligibilityStatus("Eligible");
     } else {
       setEligibilityStatus("Not Eligible");
@@ -32,7 +34,7 @@ function User({ info }) {
             <td>{info.name}</td>
             <td>{info.surname}</td>
             <td>{info.country}</td>
-            <td>{info.age}</td>
+            <td>{age}</td>
             <td>
               <time dateTime="2006-02-10">{info.dob}</time>
             </td>

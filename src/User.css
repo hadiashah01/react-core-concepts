@@ -15,7 +15,10 @@ body {
 h1 {
   text-align: center;
   margin-block: 2em;
-  text-decoration: underline;
+  height: 1.7em;
+  padding-block: 0.35em;
+  background-color: #581212;
+  color: #ebc1c1;
 }
 table {
   margin-inline: auto;
@@ -30,13 +33,13 @@ th {
   font-weight: 700;
 }
 button {
-  background-color: rgb(75, 52, 52);
+  background-color: #581212;
   color: aliceblue;
   font-size: 1.1em;
   padding-inline: 1.5em;
   margin-left: 40vw;
   padding-block: 0.5em;
-  border: 3px solid #581212;
+  border: 3px solid #8b7171;
   border-radius: 20px;
 }
 button:hover {
