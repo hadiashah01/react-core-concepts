@@ -1,3 +1,4 @@
+import "./User.css";
 import { useState } from "react";
 function User({ info }) {
   const [age, setAge] = useState(info.age);
@@ -22,6 +23,7 @@ function User({ info }) {
             <th>Date of Birth</th>
             <th>City</th>
             <th>Profession</th>
+            <th>Eligibility</th>
           </tr>
         </thead>
         <tbody>
@@ -35,10 +37,12 @@ function User({ info }) {
             </td>
             <td>{info.city}</td>
             <td>{info.profession}</td>
+            <td>{eligibilityStatus}</td>
           </tr>
         </tbody>
       </table>
-      <button onClick={checkStatus}>Eligibilty Status: {eligibilityStatus}</button>
+
+      <button onClick={checkStatus}>Check Eligibilty Status</button>
     </>
   );
 }
